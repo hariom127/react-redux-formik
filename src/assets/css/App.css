@@ -1,0 +1,79 @@
+
+/* font */ 
+@font-face {
+     font-family: 'mic32neww00-bolditalicregular';
+     src: url('../fonts/mic_32_new_bold_italic.woff2') format('woff2'),
+          url('../fonts/mic_32_new_bold_italic.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+     font-family: 'mic32neww00-boldregular';
+     src: url('../fonts/mic_32_new_bold.woff2') format('woff2'),
+          url('../fonts/mic_32_new_bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+     font-family: 'mic32neww00-italicregular';
+     src: url('../fonts/mic_32_new_italic.woff2') format('woff2'),
+          url('../fonts/mic_32_new_italic.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+     font-family: 'mic32neww00-lightregular';
+     src: url('../fonts/mic_32_new_light.woff2') format('woff2'),
+          url('../fonts/mic_32_new_light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+     font-family: 'mic32neww00-mediumitalicRg';
+     src: url('../fonts/mic_32_new_medium_italic.woff2') format('woff2'),
+          url('../fonts/mic_32_new_medium_italic.woff') format('woff');
+     font-weight: normal;
+     font-style: normal; 
+ }
+  
+ 
+ @font-face {
+     font-family: 'mic32neww00-mediumregular';
+     src: url('../fonts/mic_32_new_medium.woff2') format('woff2'),
+          url('../fonts/mic_32_new_medium.woff') format('woff');
+     font-weight: normal;
+     font-style: normal; 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+     font-family: 'mic32neww00-regularregular';
+     src: url('../fonts/mic_32_new_regular.woff2') format('woff2'),
+          url('../fonts/mic_32_new_regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ 
+ } 
+   /* sfu */
