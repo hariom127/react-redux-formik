@@ -1,98 +1,123 @@
 import Dashboard from "../pages/Dashboard";
 import Notification from "../pages/Notification";
 import Storeprofile from "../pages/Store/StoreProfile";
-import Mysales from "../pages/Mysales";
-import Pastorder from "../pages/Pastorder";
-import Items from "../pages/Items";
-import Catering from "../pages/Catering";
+import StoreSetting from "../pages/Store/StoreSetting";
+import Mysales from "../pages/Mysales/Mysales";
+import Pastorder from "../pages/Order/Pastorder";
+import Items from "../pages/Item/Items";
+import AddItem from "../pages/Item/AddItem";
+import Catering from "../pages/Catering/index";
+import Dinein from "../pages/Dinein/index";
+import Discount from "../pages/Discount/index";
 
 const route = [
   {
-    path: "/",
+    path: "/vendor",
     exact: true,
     name: "Dashboard",
     component: Dashboard,
     title: "Dashboard",
   },
   {
-    path: "/store-profile",
+    path: "/vendor/store-profile",
     exact: true,
     name: "store-profile",
     component: Storeprofile,
     title: "Store Profile",
   },
   {
-    path: "/users/branch-manager",
+    path: "/vendor/store-setting",
+    exact: true,
+    name: "store-setting",
+    component: StoreSetting,
+    title: "Store Profile",
+  },
+  {
+    path: "/vendor/users/branch-manager",
     exact: true,
     name: "branch-manager",
     component: Storeprofile,
     title: "Users",
   },
   {
-    path: "/catering",
+    path: "/vendor/catering",
     exact: true,
     name: "catering",
     component: Catering,
     title: "Catering",
   },
   {
-    path: "/notification",
+    path: "/vendor/dine-in",
+    exact: true,
+    name: "dine-in",
+    component: Dinein,
+    title: "Dine-in",
+  },
+  {
+    path: "/vendor/notification",
     exact: true,
     name: "notification",
     component: Notification,
     title: "Notification",
   },
   {
-    path: "/order-dashboard",
+    path: "/vendor/order-dashboard",
     exact: true,
     name: "order-dashboard",
     component: Notification,
     title: "Order Dashboard",
   },
   {
-    path: "/all-order",
+    path: "/vendor/all-order",
     exact: true,
     name: "all-orders",
     component: Notification,
     title: "All Order",
   },
   {
-    path: "/past-order",
+    path: "/vendor/past-order",
     exact: true,
     name: "all-orders",
     component: Pastorder,
     title: "All Order",
   },
   {
-    path: "/discount",
+    path: "/vendor/discount",
     exact: true,
     name: "discount",
-    component: Notification,
+    component: Discount,
     title: "Discount",
   },
   {
-    path: "/category",
+    path: "/vendor/categories",
     exact: true,
-    name: "category",
-    component: Notification,
+    name: "categories",
+    component: "",
     title: "Category",
   },
   {
-    path: "/item",
+    path: "/vendor/items",
     exact: true,
-    name: "item",
+    name: "items",
     component: Items,
     title: "Item",
   },
   {
-    path: "/my-sales",
+    path: "/vendor/add-item",
+    exact: true,
+    name: "add-item",
+    component: AddItem,
+    title: "Item",
+  },
+  {
+    path: "/vendor/my-sales",
     exact: true,
     name: "my-sales",
     component: Mysales,
     title: "My Sales",
   },
   {
-    path: "/logout",
+    path: "/vendor/logout",
     exact: true,
     name: "logout",
     component: Notification,

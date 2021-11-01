@@ -18,7 +18,7 @@ const Packages = () => {
                         
                         </div>
 
-                        <div class="list_inner">
+                        <div className="list_inner">
                             <figure><img src="./assets/images/chart.jpg" /></figure>
                             <div className="past-order_detail">
                             <h5><a href="#">Package 1</a></h5>
@@ -29,12 +29,12 @@ const Packages = () => {
                             
                             <div className="item_right">                           
                                 <div className="item_review_action">                                  
-                                    <a href="#" className="edit_icon"><i class="fas fa-times"></i></a>                                  
+                                    <a href="#" className="edit_icon"><i className="fas fa-times"></i></a>                                  
                                 </div>                              
                             </div> 
                         </div>
 
-                        <div class="list_inner">
+                        <div className="list_inner">
                             <figure><img src="./assets/images/chart.jpg" /></figure>
                             <div className="past-order_detail">
                             <h5><a href="#">Package 1</a></h5>
@@ -45,12 +45,12 @@ const Packages = () => {
                             
                             <div className="item_right">                           
                                 <div className="item_review_action">                                  
-                                    <a href="#" className="edit_icon"><i class="fas fa-times"></i></a>                                  
+                                    <a href="#" className="edit_icon"><i className="fas fa-times"></i></a>                                  
                                 </div>                              
                             </div> 
                         </div>
 
-                        <div class="list_inner">
+                        <div className="list_inner">
                             <figure><img src="./assets/images/chart.jpg" /></figure>
                             <div className="past-order_detail">
                             <h5><a href="#">Package 1</a></h5>
@@ -61,7 +61,7 @@ const Packages = () => {
                             
                             <div className="item_right">                           
                                 <div className="item_review_action">                                   
-                                    <a href="#" className="edit_icon"><i class="fas fa-times"></i></a>                                  
+                                    <a href="#" className="edit_icon"><i className="fas fa-times"></i></a>                                  
                                 </div>                              
                             </div> 
                         </div>

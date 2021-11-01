@@ -1,26 +1,6 @@
 import { ActionTypes } from "../constant/action-type";
+import initialState from "./initialState";
 
-const initialState = {
-  token: null,
-  user: {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    country_code: "",
-    profile: "",
-    store_location: "",
-    latitude: "",
-    longitude: "",
-    device_token: "",
-    device_type: "",
-  },
-  authenticate: false,
-  authenticating: false,
-  loading: false,
-  error: null,
-  message: "",
-};
 // (state, action) --------destructure action------> (state, {type, payload})  -----------
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {

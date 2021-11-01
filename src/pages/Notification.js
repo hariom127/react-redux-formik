@@ -18,7 +18,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
 
@@ -31,7 +31,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
 
@@ -44,7 +44,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
 
@@ -57,7 +57,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
 
@@ -70,7 +70,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
 
@@ -83,7 +83,7 @@ const Notification = (props) => {
                 quam felis, ultricies nec, pellentesque eu, pretium quis, sem
               </p>
               <span className>
-                <i class="far fa-clock"></i>10:20 am, 10 August 2021
+                <i className="far fa-clock"></i>10:20 am, 10 August 2021
               </span>
             </li>
           </ul>

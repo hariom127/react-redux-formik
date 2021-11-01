@@ -116,22 +116,6 @@
 
 
 @media only screen and (min-width: 992px) and (max-width: 1199px)  {
-
-    .timeing-label-outer h6 {
-        flex: 0 0 100px;
-        max-width: 100px;
-    }
-    
-    .partofday .form-group {
-        flex: 0 0 210px;
-        padding: 0 24px;
-        max-width: 210px;
-    }
-
-    .timing_toggle{width:36px; height:36px;}
-
-    .timing_toggle:after{width:18px;}
-    .partofday.active .timing_toggle:before{height:18px;}
   
     .light_card_header strong {
         font-size: 17px;
@@ -350,7 +334,9 @@ html {
     padding: 44px 0 24px 0;
 }
 
- 
+.overswitch {
+    width: 94px;
+}
 
 .customizarion_form {
     max-width: 540px;   
@@ -358,7 +344,7 @@ html {
 form.theme_form.editownrprofile {
     padding: 20px 0 24px 0;
 }
-.toggle_list{padding-left:28px;}
+
 
 
 
@@ -373,35 +359,12 @@ form.theme_form.editownrprofile {
 
 
 
-@media(max-width:991.98px){ 
-
-    .timeing-label-outer h6 {
-        flex: 0 0 80px;
-        max-width: 80px;
-    }
-    
-    .partofday .form-group {
-        flex: 0 0 160px;
-        padding: 0 15px;
-        max-width: 160px;
-    }
-
-    .timing_toggle {
-        width: 36px;
-        height: 36px;
-        flex: 0 0 36px;
-    }
-
-    .timing_toggle:after{width:19px;}
-    .partofday.active .timing_toggle:before{height:18px;}
+@media(max-width:991.98px){
 
     .customizarion_form {
         max-width: 450px;   
     }
 
-    .theme_form .form-group.radio-row {
-        padding-left: 25px;
-    }
     .notification_list_outer {
         padding: 10px 0;
     }
@@ -429,7 +392,6 @@ form.theme_form.editownrprofile {
         font-size: 15px;
     }
     
-    .partofday .form-group .form-select{font-size:15px;}
      
     
     .light_card_footer {
@@ -681,8 +643,8 @@ dl, ol, ul {
     padding: 44px 0 24px 0;
 }
 
-.toggle_list {
-    padding-left: 24px;
+.overswitch {
+    width: 94px;
 }
 
 .ordernumber, .normalorder {
@@ -720,13 +682,9 @@ dl, ol, ul {
     width: 115px;
     font-size: 15px;
 }
-
-.store_setting_tabs .nav-item .nav-link {
-    width: auto;
-    padding: 8px 15px;
-    margin: 0 5px;
+.pack_menu_item {
+    margin-top: 20px;
 }
-
 form.theme_form.editownrprofile {
     padding: 20px 0 24px 0;
 }
@@ -734,20 +692,8 @@ form.theme_form.editownrprofile {
 .upload_file {
     padding-left: 10px;
 }
-.toggle_list{padding-left:20px;}
-.menu_selection .modal-dialog {
-    max-width: 700px;
-}
 
-.menu_selection .modal-dialog .modal-content {
-    border-radius: 32px;
-}
-.discount_confirmation_btn .theme_btn {
-    min-width: 250px;
-    padding: 15px;
-    font-size: 24px;
-    margin: 0 10px;
-}
+
 
    
 }
@@ -758,16 +704,6 @@ form.theme_form.editownrprofile {
 
 @media(max-width:767.98px){
 
-    .store_setting_tabs .form-check label {       
-        padding: 0 6px;
-    }
-
-    form.theme_form.editownrprofile{padding-bottom:0;}
-    .store_setting_tabs{padding-bottom:15px;}
-
-    .theme_form .form-group.radio-row {
-        padding-left: 25px;
-    }
     .customization_table table{min-width:500px;}
 
     .customization_table table th, .customization_table table td{width:120px; font-size:14px;}
@@ -913,59 +849,12 @@ form.theme_form.editownrprofile {
     }
 
     .upload_droaper{border-radius:10px;}
- 
-    .menu_selection .modal-dialog .modal-content {
-        border-radius: 24px;
-    }
-
-    .slected_item_search {
-        flex: 0 0 270px;
-        height: 50px;
-    }
-    
-    .menu-selection {
-        margin-bottom: 15px;
-    }
-    
-    .menu_selection .modal-header {
-        padding: 10px;
-    }
-    
-    .menu_selection .modal-header .modal-title {
-        font-size: 24px;
-    }
-    
-    .select_accrordian_list .accordion-button {
-        font-size: 18px;
-    }
-    
-    .add_point li {
-        font-size: 17px;
-    }
-    
-    .none_all a {
-        font-size: 20px;
-    }
-    
-    .discount_confirmation_btn .theme_btn {
-        min-width: 190px;
-    }
-
-    .discount_confirmation_btn{margin:32px 0 20px 0;}
-
-    .menu_selection .modal-dialog {
-        max-width: 500px;
-    }
 
 
 }
 
 
 @media(max-width:575.98px){
-    .menu_selection .modal-dialog {
-        max-width:calc(100% - 20px); margin: 20px 10px; 
-    }
-
 
     .light_card_row {
         flex-direction: column;
@@ -1063,7 +952,7 @@ form.theme_form.editownrprofile {
     
     .theme_form .form-label {
         font-size: 15px;
-        padding-bottom: 4px;
+        padding-bottom: 8px;
     }
     
     .btn.green_btn {
@@ -1430,237 +1319,7 @@ form.theme_form.editownrprofile {
             padding: 0 10px!important;
         }
   
-        .timeing-label-outer h6 {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .timeing-label-outer {
-            flex-wrap: wrap;
-            padding: 15px;
-        }
-        
-        .partofday .form-group {
-            padding: 0 10px;
-            flex: 0 0 50%;
-            max-width: calc(50% - 20px);
-        }
-        
-        .partofday {
-            padding: 10px 0;
-            margin: 0 -10px;
-        }
-
-        .select_date_time {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-        .timing_toggle{margin-left:0; width:24px; flex:0 0 24px; max-width:24px; height:24px;}
-
-        .timing_toggle:after {
-            width: 12px;
-            height: 2px;
-        }
-
-        .partofday.active .timing_toggle:before{     width: 2px;
-            height: 12px;}
-
-            .select_time_form .btn.green_btn {
-                margin: 24px auto 10px auto;
-            }
-            .storesetting .btn.cuisine {
-                display: block;
-                max-width: 120px;               
-                margin: 10px auto 0 auto;
-                font-size:12px;
-            }
-            .profile_detail .btn.editprofile{width:100px; padding:10px!important;     height: 40px!important;}
-      
-            
-            .toggle_list {
-                flex-wrap: wrap;
-                margin: 0;
-                padding-left: 10px;
-            }
-
-            .menu_selection_button .btn.btn-primary {font-size: 14px!important;padding: 10px!important;}
-            .menu_selection_button {
-                height: 50px; 
-                margin: 15px 0 10px 0;
-            }
-
-            .menu_selection .modal-dialog .modal-content .modal-body {
-                padding: 0;
-            }
-            
-            .menu_selection .modal-dialog .modal-content {
-                padding: 15px 20px;
-            }
-            
-            .menu_selection .modal-header .modal-title {
-                font-size: 20px;
-            }
-            
-            .menu_selection .modal-header {
-                padding: 0;
-              text-align: left; 
-            }
-            
-            .menu_selection .modal-header .modal-title {
-                text-align: left;
-            }
-            
-            .menu_selection .modal-header .btn-close {background-size: 9px;padding: 5px;top: 20px;right: 20px;}
-            
-            .menu-selection {
-                flex-direction: column;
-                justify-content: normal;
-                align-items: stretch;
-                margin: 10px 0;
-            }
-            
-            .slected_item_search {
-                flex: 0 0 100%;
-                height: 50px;
-                max-width: 100%;
-                margin: 10px 0 4px 0;
-            }
-            
-            .slected_item_search .form-control {
-                width: calc(100% - 34px);
-            }
-            
-            .slected_item_search button img {
-                max-width: 16px;
-                margin-top: -2px;
-            }
-            
-            .add_point ul {
-                padding-left: 20px;
-            }
-            
-            .select_accrordian_list .accordion-button {
-                font-size: 15px;
-            }
-            
-            .add_point li {
-                font-size: 14px;
-                padding: 5px 0;
-            }
-            
-            .custome_checkbox input {
-                width: 16px;
-                height: 16px;
-            }
-            
-            .custome_checkbox {
-                width: 16px;
-                height: 16px;
-            }
-            
-            .select_accrordian_list .accordion-item .accordion-body {
-                padding: 8px 10px;
-            }
-            
-            .discount_confirmation_btn .theme_btn {
-                min-width: initial;
-                padding: 10px 24px!important;
-                font-size: 15px!important;
-                height: 40px!important;
-                margin: 0 5px;
-            }
-            
-            .discount_confirmation_btn {
-                margin: 20px 0 10px 0;
-            }
-
-.menu_selection .modal-dialog .modal-content .modal-body {
-    padding: 0;
-}
-
-.menu_selection .modal-dialog .modal-content {
-    padding: 15px 20px;
-}
-
-.menu_selection .modal-header .modal-title {
-    font-size: 20px;
-}
-
-.menu_selection .modal-header {
-    padding: 0;
-text-align: left; 
-}
-
-.menu_selection .modal-header .modal-title {
-    text-align: left;
-}
-
-.menu_selection .modal-header .btn-close {background-size: 9px;padding: 5px;top: 20px;right: 20px;}
-
-.menu-selection {
-    flex-direction: column;
-    justify-content: normal;
-    align-items: stretch;
-    margin: 10px 0;
-}
-
-.slected_item_search {
-    flex: 0 0 100%;
-    height: 50px;
-    max-width: 100%;
-    margin: 10px 0 4px 0;
-}
-
-.slected_item_search .form-control {
-    width: calc(100% - 34px);
-}
-
-.slected_item_search button img {
-    max-width: 16px;
-    margin-top: -2px;
-}
-
-.add_point ul {
-    padding-left: 20px;
-}
-
-.select_accrordian_list .accordion-button {
-    font-size: 15px;
-}
-
-.add_point li {
-    font-size: 14px;
-    padding: 5px 0;
-}
-
-.custome_checkbox input {
-    width: 16px;
-    height: 16px;
-}
-
-.custome_checkbox {
-    width: 16px;
-    height: 16px;
-}
-
-.select_accrordian_list .accordion-item .accordion-body {
-    padding: 8px 10px;
-}
-
-.discount_confirmation_btn .theme_btn {
-    min-width: initial;
-    padding: 10px 24px!important;
-    font-size: 15px!important;
-    height: 40px!important;
-    margin: 0 5px;
-}
-
-.discount_confirmation_btn {
-    margin: 20px 0 10px 0;
-}
-
+  
 }
 
  

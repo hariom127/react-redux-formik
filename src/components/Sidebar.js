@@ -18,7 +18,7 @@ const Sidebar = () => {
               <span className="nav_icon">
                 <img src="./assets/images/icons/user.svg" />
               </span>
-              Users<i class="fas fa-chevron-right"></i>
+              Users<i className="fas fa-chevron-right"></i>
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

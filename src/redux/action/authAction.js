@@ -55,16 +55,21 @@ export const signup = (user) => async (dispatch) => {
 };
 
 export const isUserLogedIn = () => async (dispatch) => {
-  const token = window.localStorage.getItem("token");
-  if (token) {
-    const user = JSON.parse(localStorage.getItem("user"));
-    dispatch({ type: ActionTypes.LOGIN_SUCCESS, payload: { token, user } });
-  } else {
-    dispatch({
-      type: ActionTypes.LOGIN_FAILER,
-      payload: { error: "Login failed" },
-    });
-  }
+  dispatch({
+    type: ActionTypes.LOGOUT_SUCCESS,
+    payload: "Logout",
+  });
+  // const token = window.localStorage.getItem("token");
+
+  // if (token) {
+  //   const user = JSON.parse(localStorage.getItem("user"));
+  //   dispatch({ type: ActionTypes.LOGIN_SUCCESS, payload: { token, user } });
+  // } else {
+  //   dispatch({
+  //     type: ActionTypes.LOGIN_SUCCESS,
+  //     payload: { error: "Login failed" },
+  //   });
+  // }
 };
 
 export const logout = () => async (dispatch) => {

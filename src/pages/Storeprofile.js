@@ -12,14 +12,14 @@ const Storeprofile = (props) => {
             <figure className="user_pic_profile">
               <img src="./assets/images/profile.png" />
             </figure>
-            <strong class="profile_Name">Treat Restaurant</strong>
+            <strong className="profile_Name">Treat Restaurant</strong>
             <a href="#" className="btn editprofile">
-              <i class="fas fa-pen"></i>Edit Profile
+              <i className="fas fa-pen"></i>Edit Profile
             </a>
 
             <span className="switch">
               <input type="checkbox" />
-              <span class="overswitch"></span>{" "}
+              <span className="overswitch"></span>{" "}
               <span className="line_condition">Available</span>
             </span>
           </div>

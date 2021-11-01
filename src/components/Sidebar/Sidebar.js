@@ -1,13 +1,13 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-import ItemComonent from "./ItemComponent";
+import ItemComponent from "./ItemComponent";
 const Sidebar = () => {
   return (
     <>
       <div className="dashboard_sidebar">
         <Nav defaultActiveKey="/home" className="flex-column dashboard_sidenav">
           {/* sidebar Item start */}
-          <ItemComonent />
+          <ItemComponent />
           {/* sidebar Item end */}
 
           {/* <Dropdown>
@@ -18,7 +18,7 @@ const Sidebar = () => {
               <span className="nav_icon">
                 <img src="./assets/images/icons/user.svg" />
               </span>
-              Users<i class="fas fa-chevron-right"></i>
+              Users<i className="fas fa-chevron-right"></i>
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

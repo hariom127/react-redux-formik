@@ -1,17 +1,9 @@
 import React, { Fragment } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import navigation from "./Navigation";
-import { Nav, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
-function ItemComonent() {
-  //assigning location variable
-  const location = useLocation();
-
-  //destructuring pathname from location
-  const { pathname } = location;
-  //Javascript split method to get the name of the path in array
-  const splitLocation = pathname.split("/");
-  console.log(splitLocation[1]);
+function ItemComponent() {
   return (
     <Fragment>
       <ul className="vertical-nav-menu">
@@ -19,7 +11,7 @@ function ItemComonent() {
           navigation.map((Item) => (
             <Fragment key={Item.name}>
               {Item.arrow ? (
-                <>
+                <Fragment key={Item.key}>
                   <Dropdown>
                     <Dropdown.Toggle
                       id="dropdown-basic"
@@ -27,41 +19,35 @@ function ItemComonent() {
                     >
                       {Item.icon}
                       {Item.heading}
-                      <i class="fas fa-chevron-right"></i>
+                      <i className="fas fa-chevron-right"></i>
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
                       {Item._children ? (
-                        <>
+                        <Fragment>
                           {Item._children &&
                             Item._children.map((Chield) => (
-                              <Link
+                              <NavLink
+                                exact
                                 to={Chield.to}
                                 name={Chield.name}
-                                className={
-                                  "/" + splitLocation[1] === Item.to
-                                    ? "active"
-                                    : ""
-                                }
+                                key={Chield.key}
                               >
                                 {Chield.title}
-                              </Link>
+                              </NavLink>
                             ))}
-                        </>
+                        </Fragment>
                       ) : (
                         ""
                       )}
                     </Dropdown.Menu>
                   </Dropdown>
-                </>
+                </Fragment>
               ) : (
-                <Link
-                  to={Item.to}
-                  className={"/" + splitLocation[1] === Item.to ? "active" : ""}
-                >
+                <NavLink exact to={Item.to}>
                   {Item.icon} {Item.heading}
                   {Item.arrow}
-                </Link>
+                </NavLink>
               )}
             </Fragment>
           ))}
@@ -70,4 +56,4 @@ function ItemComonent() {
   );
 }
 
-export default ItemComonent;
+export default ItemComponent;

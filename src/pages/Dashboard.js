@@ -13,7 +13,7 @@ const Dashboard = (props) => {
             <div className="light_card_header">
               <strong>
                 <span>
-                  <img src="./assets/images/icons/salespreview.svg" />
+                  <img src="./vendor/assets/images/icons/salespreview.svg" />
                 </span>
                 Sales Preview
               </strong>
@@ -42,7 +42,7 @@ const Dashboard = (props) => {
             <div className="light_card_header">
               <strong>
                 <span>
-                  <img src="./assets/images/icons/bag.svg" />
+                  <img src="./vendor/assets/images/icons/bag.svg" />
                 </span>
                 Total Orders
               </strong>
@@ -74,7 +74,7 @@ const Dashboard = (props) => {
             <div className="light_card_header">
               <strong>
                 <span>
-                  <img src="./assets/images/icons/performance.svg" />
+                  <img src="./vendor/assets/images/icons/performance.svg" />
                 </span>
                 Performance
               </strong>
@@ -92,19 +92,19 @@ const Dashboard = (props) => {
                   <strong>Home Delivery</strong>
                   <div className="star_list">
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                   </div>
                 </li>
@@ -113,19 +113,19 @@ const Dashboard = (props) => {
                   <strong>Pickup</strong>
                   <div className="star_list">
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                   </div>
                 </li>
@@ -134,19 +134,19 @@ const Dashboard = (props) => {
                   <strong>Home Delivery</strong>
                   <div className="star_list">
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span className="fillstar">
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                     <span>
-                      <img src="./assets/images/icons/fillstar.svg" />
+                      <img src="./vendor/assets/images/icons/fillstar.svg" />
                     </span>
                   </div>
                 </li>
@@ -158,7 +158,7 @@ const Dashboard = (props) => {
             <div className="light_card_header">
               <strong>
                 <span>
-                  <img src="./assets/images/icons/salespreview.svg" />
+                  <img src="./vendor/assets/images/icons/salespreview.svg" />
                 </span>
                 Top 6 Favourite items
               </strong>
@@ -168,25 +168,25 @@ const Dashboard = (props) => {
               <ul className="favorite_item">
                 <li>
                   <figure>
-                    <img src="./assets/images/icons/banana.svg" />
+                    <img src="./vendor/assets/images/icons/banana.svg" />
                   </figure>
                   <strong>Home Delivery</strong>
                 </li>
                 <li>
                   <figure>
-                    <img src="./assets/images/icons/leves.svg" />
+                    <img src="./vendor/assets/images/icons/leves.svg" />
                   </figure>
                   <strong>Home Delivery</strong>
                 </li>
                 <li>
                   <figure>
-                    <img src="./assets/images/icons/grapes.svg" />
+                    <img src="./vendor/assets/images/icons/grapes.svg" />
                   </figure>
                   <strong>Home Delivery</strong>
                 </li>
                 <li>
                   <figure>
-                    <img src="./assets/images/icons/banana.svg" />
+                    <img src="./vendor/assets/images/icons/banana.svg" />
                   </figure>
                   <strong>Home Delivery</strong>
                 </li>
@@ -195,19 +195,19 @@ const Dashboard = (props) => {
           </div>
         </div>
 
-        <div class="chart_outer">
+        <div className="chart_outer">
           <div className="chart_header">
             <h3>
               <small>OVERVIEW</small>Hourly Report
             </h3>
           </div>
 
-          <div class="chart_cnt-outer">
-            <img width="100%" src="./assets/images/chart.png" />
+          <div className="chart_cnt-outer">
+            <img width="100%" src="./vendor/assets/images/chart.png" />
           </div>
         </div>
 
-        <div class="chart_outer">
+        <div className="chart_outer">
           <div className="chart_header">
             <h3>
               <small>OVERVIEW</small>Sales Chart
@@ -218,17 +218,17 @@ const Dashboard = (props) => {
               className="mb-3"
             >
               <Tab eventKey="Daily" title="Daily">
-                <img width="100%" src="./assets/images/chart.png" />
+                <img width="100%" src="./vendor/assets/images/chart.png" />
               </Tab>
               <Tab eventKey="Weekly" title="Weekly">
-                <img width="100%" src="./assets/images/chart.png" />
+                <img width="100%" src="./vendor/assets/images/chart.png" />
               </Tab>
               <Tab eventKey="Monthly" title="Monthly">
-                <img width="100%" src="./assets/images/chart.png" />
+                <img width="100%" src="./vendor/assets/images/chart.png" />
               </Tab>
 
               <Tab eventKey="Quarterly" title="Quarterly">
-                <img width="100%" src="./assets/images/chart.png" />
+                <img width="100%" src="./vendor/assets/images/chart.png" />
               </Tab>
             </Tabs>
           </div>

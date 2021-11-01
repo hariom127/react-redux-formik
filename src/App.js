@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
@@ -7,22 +7,21 @@ import "./assets/css/media.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./assets/css/developer.css";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import { useSelector } from "react-redux";
-import Login from "./pages/Auth/Login";
-import Registration from "./pages/Auth/Registration";
-
+import { Route, Switch, Redirect } from "react-router-dom";
+import { connect, useDispatch, useSelector } from "react-redux";
 import vendorRoute from "./routes/vendorRoute";
+import authRoute from "./routes/authRoute";
 import config from "./config";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App(props) {
-  const auth = useSelector((state) => state.authState);
-  const { authenticate } = auth;
+  const dispatch = useDispatch();
+  const { authenticate } = props;
+  console.log(authenticate);
 
   // register app routing
-  const menu = vendorRoute.map((route, index) => {
+  const authRoutes = authRoute.map((route, index) => {
     return route.component ? (
       <Route
         key={index}
@@ -30,8 +29,8 @@ function App(props) {
         exact={route.exact}
         name={route.name}
         render={(props) =>
-          authenticate === false ? (
-            <Redirect to={config.LOGIN_PATH} />
+          authenticate ? (
+            <Redirect to={config.basename} />
           ) : (
             <route.component {...props} title={route.title} />
           )
@@ -39,7 +38,23 @@ function App(props) {
       />
     ) : null;
   });
-
+  const vendorRoutes = vendorRoute.map((route, index) => {
+    return route.component ? (
+      <Route
+        key={index}
+        path={route.path}
+        exact={route.exact}
+        name={route.name}
+        render={(props) =>
+          authenticate ? (
+            <route.component {...props} title={route.title} />
+          ) : (
+            <Redirect to={config.LOGIN_PATH} />
+          )
+        }
+      />
+    ) : null;
+  });
   return (
     <>
       <ToastContainer
@@ -51,27 +66,20 @@ function App(props) {
         draggable
         pauseOnHover={false}
       />
-      <BrowserRouter>
-        <Switch>
-          {menu}
-          <Route
-            key="login"
-            path="/login"
-            exact={true}
-            name="login"
-            component={Login}
-          />
-          <Route
-            key="registration"
-            path="/registration"
-            exact={true}
-            name="registration"
-            component={Registration}
-          />
-        </Switch>
-      </BrowserRouter>
+
+      <Switch>
+        {vendorRoutes}
+        {authRoutes}
+      </Switch>
     </>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  const { authenticate } = state.authState;
+  return {
+    authenticate: authenticate,
+  };
+}
+
+export default connect(mapStateToProps)(App);

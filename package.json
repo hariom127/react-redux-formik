@@ -2,6 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/vendor",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -27,9 +28,10 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"
+    
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3090 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
