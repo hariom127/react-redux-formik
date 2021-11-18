@@ -513,7 +513,15 @@ li {
     opacity: 0;
 }
  
-.switch input[type="checkbox"]:checked + .overswitch:after {background: #9cac3a;right: 0;left: auto;}
+/* .switch input[type="checkbox"] + .overswitch:after {
+    background: #9cac3a;
+    right: 0;
+    left: auto;
+} */
+
+
+/* .switch input[type="checkbox"]:checked + .overswitch:after {background: #9cac3a;right: 0;left: auto;} */
+.switch input.checkbox-b + .overswitch:after {background: #9cac3a;right: 0;left: auto;}
 
 .theme_form .form-label {
     color: #736B82;
@@ -597,23 +605,25 @@ li {
     width: 100%;
 }
 
-.upload_outer:after {content: "+";
+.upload_outer:after {
+    content: "+";
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
     font-size: 74px;
     color: #DBDCDD;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    /* align-items: center; */
     top: 0;
     text-align: center;
     right: 0;
     width: 100%;
-    display: inline-block;
-    margin: 20px 0;
+    margin: 0;
     z-index: 7;
-    line-height: 0.7;}
+    line-height: 1;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: -5px 0;
+    font-weight: 100!important;
+}
 
     .mysales_outer .nav-tabs {
         padding: 20px 0;
@@ -924,11 +934,13 @@ li {
     }
     
     .btn:hover:not(.dropdown-toggle), .btn:focus:not(.dropdown-toggle) {
-        background: #adbd49;
-        border-radius: 50px;
-        color: #fff;
-        min-width: 118px;
+        background: #adbd49;  
         border-color: #9CAC3A;
+    }
+
+    .btn.redisclr:hover{
+        border-color: #CF0051;
+        background-color: #df1562;
     }
 
     .items_page_head {
@@ -2002,7 +2014,7 @@ li {
 
 .single_select .switch input + .overswitch:before {content: "No";position: absolute;left: auto;top: 5px;font-size: 14px;color: #767676;right: 13px;}
 
-.single_select .switch input:checked + .overswitch:before {
+.single_select .switch input.checkbox-b + .overswitch:before {
     content: "Yes";
     color: #000;
     left:11px; right:auto;
@@ -2028,3 +2040,136 @@ li {
     padding-left: 52px;
     margin: 0 -20px;
 }
+
+.add-branch-manager {
+    padding: 0 0 36px 0;
+}
+
+
+/**============add===========**/
+
+.inline_b .form-check {
+    display: inline-block;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.inline_b .form-check label {
+    padding: 5px 10px 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #BEBEBE;
+}
+
+.inline_b .form-check {
+    padding-right: 5px;
+}
+
+.add_member_right .addmore_member {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.add_member_right .btn.addmore_btn span {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: #b9c95a;
+    border-radius: 50px;
+    font-size: 30px;
+    line-height: 1.2;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.add_group_contant .theme_form {
+    padding-top: 20px;
+    padding-bottom:0;
+} 
+.mysales_outer.add_group_contant .nav-item .nav-link {
+    width: auto;
+    padding: 8px 20px;
+}
+.grp_listing_outer {
+    padding: 0 0 36px 0;
+}
+
+.grp_listing_outer li a {
+    padding: 15px 20px;
+}
+
+.manager_head {
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 15px 0;
+}
+.manager_head .btn {
+    min-height: 40px;
+    padding: 8px 20px;
+}
+.user_detail tr th, .user_detail tr td {
+    width: auto;
+}
+.user_detail tr th, .user_detail tr td {
+    width: auto;
+}
+
+/* .user_detail .table_action a {
+    width: auto;
+    text-decoration: none;
+    padding: 6px 15px;
+    height: auto;
+    font-size: 13px;
+    background: #9cac3a;
+    color: #fff;
+}
+
+.user_detail .table_action a img {
+    margin-right: 5px;
+    filter: brightness(100);
+} */
+
+
+.grp_listing_outer ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid #DBDCDD;
+    margin: -1px;
+    position: relative;
+    text-decoration: none;
+    color: #736B82;
+    font-size: 20px;
+    align-items: center;
+}
+
+.grp_listing_outer ul li .item_review_action a {
+    padding: 0 0 0 15px;
+}
+
+.grp_listing_outer ul li .item_review_action a:first-child{padding-left:0;}
+
+.grp_listing_outer ul li .item_review_action {
+    margin: 0;
+}
+
+.manager_head h2 {
+    margin-bottom: 0!important;
+}
+
+.search_form .search_btn img {
+    max-width: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,13 +3,16 @@ import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const Storeprofile = (props) => {
   /***
    * Setup form validation and submit handel
    */
   const ProfileSchema = Yup.object().shape({
-    store_manager: Yup.string().required("Required"),
+    store_manager: Yup.string()
+      .max(15, "Must be 15 characters or less")
+      .required("Required"),
     store_name_en: Yup.string()
       .max(15, "Must be 15 characters or less")
       .required("Required"),
@@ -45,7 +48,8 @@ const Storeprofile = (props) => {
     validationSchema: ProfileSchema,
     onSubmit: (values, action) => {
       alert("ddff");
-      //   dispatch(signup(values));
+      console.log(values);
+      //dispatch(signup(values));
     },
   });
 
@@ -59,9 +63,9 @@ const Storeprofile = (props) => {
               <img src="./assets/images/profile.png" />
             </figure>
             <strong className="profile_Name">Treat Restaurant</strong>
-            <a href="#" className="btn editprofile">
+            <Link to={`owner-profile`} className="btn editprofile">
               <i className="fas fa-pen"></i>Edit Profile
-            </a>
+            </Link>
 
             <span className="switch">
               <input type="checkbox" />
@@ -77,6 +81,7 @@ const Storeprofile = (props) => {
                   <Form.Label>Store Manager</Form.Label>
                   <select name="store_manager">
                     <option value="">-Chose Manager-</option>
+                    <option value="test">Manager</option>
                   </select>
                   {formik.touched.store_manager &&
                   formik.errors.store_manager ? (

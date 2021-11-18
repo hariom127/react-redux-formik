@@ -1,6 +1,9 @@
 import Dashboard from "../pages/Dashboard";
 import Notification from "../pages/Notification";
 import Storeprofile from "../pages/Store/StoreProfile";
+import EditOwnerProfile from "../pages/Store/EditOwnerProfile";
+import ManagerList from "../pages/User/BranchManager/ManagerList";
+import AddBrnchManager from "../pages/User/BranchManager/AddBrnchManager";
 import StoreSetting from "../pages/Store/StoreSetting";
 import Mysales from "../pages/Mysales/Mysales";
 import Pastorder from "../pages/Order/Pastorder";
@@ -9,12 +12,13 @@ import AddItem from "../pages/Item/AddItem";
 import Catering from "../pages/Catering/index";
 import Dinein from "../pages/Dinein/index";
 import Discount from "../pages/Discount/index";
+import Group from "../pages/Group/Group";
 
 const route = [
   {
     path: "/vendor",
     exact: true,
-    name: "Dashboard",
+    name: "dashboard",
     component: Dashboard,
     title: "Dashboard",
   },
@@ -26,6 +30,13 @@ const route = [
     title: "Store Profile",
   },
   {
+    path: "/vendor/owner-profile",
+    exact: true,
+    name: "owner-profile",
+    component: EditOwnerProfile,
+    title: "Owner Profile",
+  },
+  {
     path: "/vendor/store-setting",
     exact: true,
     name: "store-setting",
@@ -33,11 +44,25 @@ const route = [
     title: "Store Profile",
   },
   {
-    path: "/vendor/users/branch-manager",
+    path: "/vendor/groups",
+    exact: true,
+    name: "groups",
+    component: Group,
+    title: "Groups",
+  },
+  {
+    path: "/vendor/branch-manager",
     exact: true,
     name: "branch-manager",
-    component: Storeprofile,
-    title: "Users",
+    component: ManagerList,
+    title: "Branch Manager",
+  },
+  {
+    path: "/vendor/add-branch-manager",
+    exact: true,
+    name: "add-branch-manager",
+    component: AddBrnchManager,
+    title: "Add Manager",
   },
   {
     path: "/vendor/catering",

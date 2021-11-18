@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Layout from "../../components/Layout";
 import { signup } from "../../redux/action/authAction";
 import { fetchVariants } from "../../redux/action/variantsAction";
@@ -17,12 +17,13 @@ const Registration = (props) => {
    */
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log("Registration");
     dispatch(fetchVariants());
   }, []);
 
   const auth = useSelector((state) => state.authState);
   const variants = useSelector((state) => state.variants);
-  console.log(variants.variants, "variants");
+
   //--loader css--
   const override = css`
     display: flex !important;
@@ -63,6 +64,7 @@ const Registration = (props) => {
     firstName: "",
     lastName: "",
     phone: "",
+    country_code: "+973",
     email: "",
     branches: "",
     owner_profile: "",
@@ -71,9 +73,8 @@ const Registration = (props) => {
   };
 
   const onSubmit = (values, onSubmitProps) => {
-    console.log("Saved data", JSON.parse(JSON.stringify(values)));
     dispatch(signup(values));
-    // onSubmitProps.resetForm();
+    onSubmitProps.resetForm();
   };
 
   // if user loged in redirect to on dashboard
@@ -125,6 +126,16 @@ const Registration = (props) => {
                         type="text"
                         label="Mobile"
                         name="phone"
+                        placeholder="Mobile"
+                        className="form-control"
+                      />
+
+                      <FormikControl
+                        control="input"
+                        type="hidden"
+                        label=""
+                        name="country_code"
+                        value="+973"
                         placeholder="Mobile"
                         className="form-control"
                       />

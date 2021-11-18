@@ -46,7 +46,7 @@ export const signup = (user) => async (dispatch) => {
       dispatch({ type: ActionTypes.SIGNUP_FAILED, payload: { message } });
     }
   } catch (error) {
-    toast(error.message, { type: "error", autoClose: 3000 });
+    // toast(error.message, { type: "error", autoClose: 3000 });
     dispatch({
       type: ActionTypes.LOGIN_FAILER,
       payload: { error },

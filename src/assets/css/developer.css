@@ -9,3 +9,42 @@ a {
     margin: 0 auto;
     border-color: red;
     }
+.upload_outer > div {
+    z-index: 8;
+}
+
+.uploded-pic {
+    width: 100%;
+    background: #fff;
+}
+.upload_outer{overflow:hidden;}
+
+.upload_outer input.form-control-file {
+    z-index: 8;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+}
+
+ 
+.upload_droaper 
+ .uploded-pic {
+    width: 150px;
+    margin: 10px;
+    background: #fff;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.upload_droaper input[type="file"] {
+    z-index: 999;
+}
+ 
+
+
+
+
+
+ 

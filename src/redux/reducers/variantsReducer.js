@@ -1,5 +1,4 @@
 import { ActionTypes } from "../constant/action-type";
-import initialState from "./initialState";
 
 export const variantsReducer = (state = [], { type, payload }) => {
   switch (type) {

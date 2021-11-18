@@ -13,7 +13,7 @@ export const fetchVariants = () => async (dispatch) => {
       });
     }
   } catch (error) {
-    toast(error.message, { type: "error", autoClose: 3000 });
+    // toast(error.message, { type: "error", autoClose: 3000 });
     dispatch({
       type: ActionTypes.FETCH_VARIANTS_FAILED,
       payload: { error },

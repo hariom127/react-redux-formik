@@ -42,7 +42,7 @@ const Login = (props) => {
 
   // if user loged in redirect to on dashboard
   // if (auth.authenticate && auth.token) {
-  //   return <Redirect to={`/`} />;
+  //   return <Redirect to={`/vendor/dashboard`} />;
   // }
 
   return (
@@ -66,9 +66,9 @@ const Login = (props) => {
                     <FormikControl
                       control="input"
                       type="text"
-                      label="Email Addr ess"
+                      label="Email Address"
                       name="username"
-                      placeholder="Username"
+                      placeholder="Email Address"
                       className="form-control"
                     />
                   </div>
