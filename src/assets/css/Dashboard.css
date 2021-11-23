@@ -979,13 +979,13 @@ li {
         height: 30px;
     }
     
-    .items_page .list_inner .switch .overswitch:after {
+ .switch .overswitch:after {
         width: 30px;
         height: 30px;
         left: 0;
     }
     
-    .items_page  .switch input[type="checkbox"] {
+  .switch input[type="checkbox"] {
         right: 0;
         width: 76px;
     }
@@ -1715,6 +1715,7 @@ li {
 }
 
 .timing_toggle:after {content: "";width: 26px;height: 3px;position: absolute;background: #C5C5C5;left: 0;right: 0;margin: auto;}
+ .timing_toggle:before {content: "";width: 3px;height: 26px;position: absolute;background: #C5C5C5;left: 0;right: 0;margin: auto;top: 2px;bottom: 0;}
 
 .choose_timeing_part {
     border: 1px solid #EBECEC;   
@@ -1772,7 +1773,7 @@ li {
     flex: 0 0 100%;
     max-width: calc(100% - 136px);
 }
-.partofday.active .timing_toggle:before {content: "";width: 3px;height: 26px;position: absolute;background: #C5C5C5;left: 0;right: 0;margin: auto;top: 2px;bottom: 0;}
+
 .select_time_form .btn.green_btn {
     margin: 50px auto 32px auto;
 }
@@ -2161,7 +2162,6 @@ li {
 .search_form .search_btn img {
     max-width: 24px;
 }
-
 
 
 

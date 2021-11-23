@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/Layout";
@@ -8,16 +8,29 @@ import {
   deleteItem,
   updateItemStatus,
 } from "../../redux/action/ItemAction";
+import { fetchCategoriesByStore } from "../../redux/action/ItemCategoryAction";
 import Swal from "sweetalert2";
 
 const Items = () => {
   const dispatch = useDispatch();
+  const [storeId, setStoreId] = useState(null);
+
   useEffect(() => {
     dispatch(fetchItems());
+    setStoreId(_id);
   }, []);
+
+  useEffect(() => {
+    dispatch(fetchCategoriesByStore(storeId));
+  }, [storeId]);
 
   // get item data
   const ItemsData = useSelector((state) => state.ItemReducer);
+  const settingData = useSelector((state) => state.StoreSettingReducer);
+  const ItemCategories = useSelector(
+    (state) => state.StoreCategoryReducer.payload
+  );
+  const { _id } = settingData.setting_data ? settingData.setting_data : {};
 
   // ----------delete start----------
   const swalWithBootstrapButtonsDelete = Swal.mixin({
@@ -29,8 +42,6 @@ const Items = () => {
   });
   const onDelete = (e) => {
     let itemId = e.target.id;
-    console.log(itemId);
-
     swalWithBootstrapButtonsDelete
       .fire({
         title: "<h5><b>Are you sure you want to delete this Group?</b></h5>",
@@ -55,15 +66,22 @@ const Items = () => {
 
   // ----------update status---------------
   const onClickToggle = (e) => {
-    console.log(e.target.checked);
     if (e.target.checked) {
       e.target.classList.remove("checkbox-b");
       e.target.classList.checked = false;
-      dispatch(updateItemStatus(e.target.id));
+      let req = {
+        id: e.target.id,
+        is_active: 0,
+      };
+      dispatch(updateItemStatus(req));
     } else {
       e.target.classList.add("checkbox-b");
       e.target.classList.checked = true;
-      dispatch(updateItemStatus(e.target.id));
+      let req = {
+        id: e.target.id,
+        is_active: 1,
+      };
+      dispatch(updateItemStatus(req));
     }
   };
 
@@ -91,10 +109,15 @@ const Items = () => {
               </select>
 
               <select>
-                <option value="volvo">Search by Category</option>
-                <option value="saab">Monday</option>
-                <option value="opel">Tuesday</option>
-                <option value="audi">wednesday</option>
+                <option value="">Search by Category</option>
+                {ItemCategories &&
+                  ItemCategories.data &&
+                  ItemCategories.data.docs &&
+                  ItemCategories.data.docs.map((category) => (
+                    <option value={category._id} key={category._id}>
+                      {category.category}
+                    </option>
+                  ))}
               </select>
               <Button className="btn search_btn">Search</Button>
             </div>
@@ -105,12 +128,13 @@ const Items = () => {
               <div className="items_page_head">
                 <strong className="strong_cont">Category 1</strong>
                 <div className="item_action">
-                  <Link exact to={`/vendor/add-item`} className="btn item_btn">
+                  <Link
+                    exact="true"
+                    to={`/vendor/add-item`}
+                    className="btn item_btn"
+                  >
                     Add Item
                   </Link>
-                  <a href="#" className="btn item_btn">
-                    Show Item
-                  </a>
                 </div>
               </div>
 
@@ -162,7 +186,7 @@ const Items = () => {
                         <span className="overswitch"></span>
                       </span>
                       <div className="item_review_action">
-                        <a href="#" className="edit_icon">
+                        <a href="javascript:void(0)" className="edit_icon">
                           <i className="fas fa-pen"></i>
                         </a>
                         <a

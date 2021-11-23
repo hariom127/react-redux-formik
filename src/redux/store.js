@@ -10,7 +10,7 @@ import reducers from "./reducers/index";
 const persistConfig = {
   key: "authState",
   storage: storage,
-  whitelist: ["authState"], // which reducer want to store
+  whitelist: ["authState", "StoreSettingReducer"], // which reducer want to store
 };
 const pReducer = persistReducer(persistConfig, reducers);
 

@@ -10,6 +10,7 @@ import * as Yup from "yup";
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import ownerProfile from "../../data/owner_profile";
+import { Link } from "react-router-dom";
 
 const Registration = (props) => {
   /***
@@ -17,7 +18,6 @@ const Registration = (props) => {
    */
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log("Registration");
     dispatch(fetchVariants());
   }, []);
 
@@ -85,9 +85,9 @@ const Registration = (props) => {
     <Layout>
       <section className="signing-page signupsml">
         <div className="login_box register_box layout-wrapper">
-          <a href="/vendor" className="brand">
+          <span className="brand">
             <img src="../vendor/assets/images/logo2.svg" />
-          </a>
+          </span>
           <strong>Reach new customers, get more sales</strong>
           <small>Sign up to create account with us</small>
           <div className="theme_form signing-form register_form">
@@ -208,6 +208,9 @@ const Registration = (props) => {
               )}
             </Formik>
           </div>
+          <small>
+            Already have an account? <Link to="/vendor/login"> Login now </Link>
+          </small>
         </div>
       </section>
     </Layout>

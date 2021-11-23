@@ -1,6 +1,7 @@
 import axios from "../../helper/axios";
 import { ItemTypes } from "../constant/item-action-type";
 import { toast } from "react-toastify";
+import { getStoreSetting } from "./StoreSettingAction";
 
 export const fetchItems = () => async (dispatch) => {
   try {
@@ -9,6 +10,7 @@ export const fetchItems = () => async (dispatch) => {
     if (res.status === 200) {
       const data = res.data.data;
       dispatch({ type: ItemTypes.GET_ITEM_SUCCESS, payload: { data } });
+      dispatch(getStoreSetting());
     }
   } catch (error) {
     toast(error.message, { type: "error", autoClose: 3000 });
@@ -20,7 +22,6 @@ export const fetchItems = () => async (dispatch) => {
 };
 
 export const addItem = (requestData) => async (dispatch) => {
-  console.log(requestData.entries(), "Action");
   try {
     dispatch({ type: ItemTypes.SAVE_ITEM_REQUEST });
     const res = await axios.post(`/vendor/products`, requestData);
@@ -61,10 +62,12 @@ export const deleteItem = (itemId) => async (dispatch) => {
   }
 };
 
-export const updateItemStatus = (itemId) => async (dispatch) => {
+export const updateItemStatus = (requestData) => async (dispatch) => {
   try {
     dispatch({ type: ItemTypes.UPDATE_ITEM_STATUS_REQUEST });
-    const res = await axios.put(`/vendor/products/status/${itemId}`);
+    const res = await axios.put(`/vendor/products/status/${requestData.id}`, {
+      is_active: requestData.is_active,
+    });
     if (res.status === 200) {
       dispatch({ type: ItemTypes.UPDATE_ITEM_STATUS_SUCCESS, payload: {} });
       toast("Status has been updated successfully", {

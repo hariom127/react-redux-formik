@@ -48,7 +48,7 @@ const Storeprofile = (props) => {
     validationSchema: ProfileSchema,
     onSubmit: (values, action) => {
       alert("ddff");
-      console.log(values);
+      // console.log(values);
       //dispatch(signup(values));
     },
   });
@@ -63,7 +63,7 @@ const Storeprofile = (props) => {
               <img src="./assets/images/profile.png" />
             </figure>
             <strong className="profile_Name">Treat Restaurant</strong>
-            <Link to={`owner-profile`} className="btn editprofile">
+            <Link exact="true" to={`owner-profile`} className="btn editprofile">
               <i className="fas fa-pen"></i>Edit Profile
             </Link>
 

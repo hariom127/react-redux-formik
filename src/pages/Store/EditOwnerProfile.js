@@ -104,9 +104,9 @@ const EditOwnerProfile = () => {
 
     setTimeout(function () {
       dispatch(updateStoreOwnerProfile(data));
-      for (var key of data.entries()) {
-        console.log(key[0] + ", " + key[1]);
-      }
+      // for (var key of data.entries()) {
+      //   console.log(key[0] + ", " + key[1]);
+      // }
     }, 200);
   };
 

@@ -21,3 +21,25 @@ export const fetchItemsAllCategories = () => async (dispatch) => {
     });
   }
 };
+
+export const fetchCategoriesByStore = (storeId) => async (dispatch) => {
+  try {
+    if (storeId) {
+      dispatch({ type: ItemCategoryTypes.GET_STORE_CATEGORY_REQUEST });
+      const res = await axios.get(`/customer/products/categories/${storeId}`);
+      if (res.status === 200) {
+        const data = res.data.data;
+        dispatch({
+          type: ItemCategoryTypes.GET_STORE_CATEGORY_SUCCESS,
+          payload: { data },
+        });
+      }
+    }
+  } catch (error) {
+    toast(error.message, { type: "error", autoClose: 3000 });
+    dispatch({
+      type: ItemCategoryTypes.GET_STORE_CATEGORY_FAILED,
+      payload: { error },
+    });
+  }
+};

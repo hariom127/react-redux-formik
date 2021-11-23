@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Spinner } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import { login } from "../../redux/action/authAction";
-import { Redirect } from "react-router-dom";
 import { Formik, Form } from "formik";
 import FormikControl from "../../components/Formik/FormikControl";
 import * as Yup from "yup";
@@ -95,13 +94,20 @@ const Login = (props) => {
                     )}
                   </Button>
                   <Link
-                    exact
-                    to="/registration"
-                    name="registration"
+                    exact="true"
+                    to="/vendor/login"
+                    name="login"
                     className="forgotpass"
                   >
                     Forgot Password?
                   </Link>
+                  <small>
+                    Not have an account?
+                    <Link exact="true" to="/vendor/registration">
+                      {` Sign up `}
+                    </Link>
+                    now
+                  </small>
                 </div>
               </Form>
             )}

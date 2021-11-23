@@ -1,6 +1,7 @@
 import axios from "../../helper/axios";
 import { ActionTypes } from "../constant/action-type";
 import { toast } from "react-toastify";
+import { getStoreSetting } from "./StoreSettingAction";
 
 export const login = (user) => async (dispatch) => {
   try {
@@ -14,6 +15,7 @@ export const login = (user) => async (dispatch) => {
       toast("login success!", { type: "success", autoClose: 3000 });
 
       dispatch({ type: ActionTypes.LOGIN_SUCCESS, payload: { token, user } });
+      dispatch(getStoreSetting());
     }
   } catch (error) {
     toast(error.message, { type: "error", autoClose: 3000 });

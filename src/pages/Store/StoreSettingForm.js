@@ -60,7 +60,7 @@ export default function StoreSettingForm() {
     mobile_bg_image_thumb_url,
     mobile_logo_image_thumb_url,
   } = settingData.setting_data ? settingData.setting_data : {};
-  console.log(settingData.setting_data);
+  // console.log(settingData.setting_data);
 
   useEffect(() => {
     const is_dine_available =
@@ -218,9 +218,9 @@ export default function StoreSettingForm() {
 
     setTimeout(function () {
       dispatch(updateStoreSetting(data));
-      for (var key of data.entries()) {
-        console.log(key[0] + ", " + key[1]);
-      }
+      // for (var key of data.entries()) {
+      //   console.log(key[0] + ", " + key[1]);
+      // }
     }, 500);
   };
 

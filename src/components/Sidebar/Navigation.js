@@ -111,15 +111,13 @@ const navigation = [
     to: "/vendor/discount",
     icon: <IconComponent img_icon={`${iconUrl}/discount.svg`}></IconComponent>,
   },
-  // {
-  //   heading: "Category",
-  //   name: "categories",
-  //   key: "category-key",
-  //   to: "/vendor/categories",
-  //   icon: (
-  //     <IconComponent img_icon={`${iconUrl}/categoery.svg`}></IconComponent>
-  //   ),
-  // },
+  {
+    heading: "Category",
+    name: "categories",
+    key: "category-key",
+    to: "/vendor/categories",
+    icon: <IconComponent img_icon={`${iconUrl}/categoery.svg`}></IconComponent>,
+  },
   {
     heading: "Item",
     name: "item",

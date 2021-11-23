@@ -8,6 +8,7 @@ import { GroupReducer } from "./GroupReducer";
 import { PermissionReducer } from "./PermissionReducer";
 import { GroupPermissionReducer } from "./GroupPermissionReducer";
 import { ItemCategoryReducer } from "./ItemCategoryReducer";
+import { StoreCategoryReducer } from "./StoreCategoryReducer";
 import initialState from "./initialState";
 
 const rootReducers = combineReducers({
@@ -20,6 +21,7 @@ const rootReducers = combineReducers({
   PermissionReducer,
   GroupPermissionReducer,
   ItemCategoryReducer,
+  StoreCategoryReducer,
 });
 
 const reducers = function combinedRootReducer(state, action) {

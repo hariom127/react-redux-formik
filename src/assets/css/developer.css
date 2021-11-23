@@ -42,9 +42,28 @@ a {
     z-index: 999;
 }
  
+.timeing-label-outer input {
+    border: none;
+    border-bottom: 1px solid #707070;
+    border-radius: 0;
+    padding: 3px 0;
+    color: #736B82;
+    font-size: 18px;
+}
+
+.only-minus:before {
+    display: none;
+}
 
 
+.firstrow {
+    position: relative;
+}
 
-
+.firstrow .plushbtn {
+    position: absolute;
+    top: 22px;
+    right: 40px;
+}
 
  
